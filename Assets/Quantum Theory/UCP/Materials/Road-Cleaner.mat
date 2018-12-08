@@ -1,0 +1,57 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Road-Cleaner
+  m_Shader: {fileID: 10703, guid: 0000000000000000f000000000000000, type: 0}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 5
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _BlendText:
+        m_Texture: {fileID: 2800000, guid: a49da78487cdc3145b053e8a7c51cbe3, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 1, y: 0.5}
+    - _Cube:
+        m_Texture: {fileID: 8900000, guid: 4aeccc216aecf9e48b8d5cfaf31dfa74, type: 2}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _CubeMask:
+        m_Texture: {fileID: 2800000, guid: fe67316a0e8729c49be1920a58461583, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Diffuse:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: fe67316a0e8729c49be1920a58461583, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _MaskBias: 2.8846154
+    - _Power: 1.65
+    - _Strength: 4.6
+    - _Subtraction: 0.53846157
+    - _VectorPower: 1.7307688
+    - _exponent: 10
+    - _g: 0.35074627
+    - _range: 2.2818615
+    - _range1: 0.48507464
+    - _range2: 3.5373132
+    - _somerange: -5
+    - _subtract: 1.05
+    m_Colors:
+    - _Angle: {r: 8.34, g: -3.38, b: 0, a: 0}
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _VectorAngle: {r: -8.85, g: 1.47, b: -2.2007, a: -0.01}

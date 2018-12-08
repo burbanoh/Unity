@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: QT_SkyBox-DayA
+  m_Shader: {fileID: 4800000, guid: 8690b8680aa4bbd48bc1b84e12f7c502, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: f65ca83d6d5f0944db5613241a6dc266, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SkyBoxTex:
+        m_Texture: {fileID: 2800000, guid: f65ca83d6d5f0944db5613241a6dc266, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SkyDomeTex:
+        m_Texture: {fileID: 2800000, guid: f65ca83d6d5f0944db5613241a6dc266, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _Clarity: 0
+    - _FogAmount: 1.3076923
+    - _FogDensity: 1.3846155
+    - _FogDistance: 5.4242253
+    - _FogHeight: 1.1846148
+    m_Colors:
+    - _Color: {r: 0.44776118, g: 0.41401902, b: 0.32078412, a: 1}
+    - _FogColor: {r: 0.67058825, g: 0.6392157, b: 0.4392157, a: 0.9411765}
