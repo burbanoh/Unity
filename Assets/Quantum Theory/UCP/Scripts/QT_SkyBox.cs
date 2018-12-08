@@ -26,8 +26,7 @@ public class QT_SkyBox : MonoBehaviour {
 			
 		SkyCamera.GetComponent<Camera>().fieldOfView = MainCam.GetComponent<Camera>().fieldOfView;
 			if(animated)			
-				SkyBox.transform.RotateAround(axis,(rate*0.005f)*Time.deltaTime);
-			
+				SkyBox.transform.Rotate(axis,(rate*0.005f)*Time.deltaTime);
 		}
 		else
 			Debug.LogError(this.name + " has no Main Camera associated with it. The skybox is broken!");		

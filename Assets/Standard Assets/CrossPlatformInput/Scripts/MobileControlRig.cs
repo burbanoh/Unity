@@ -1,8 +1,10 @@
 using System;
 #if UNITY_EDITOR
 using UnityEditor;
+using UnityEditor.Build;
 #endif
 using UnityEngine;
+
 
 
 namespace UnityStandardAssets.CrossPlatformInput
@@ -45,7 +47,7 @@ namespace UnityStandardAssets.CrossPlatformInput
 
         private void OnEnable()
         {
-            EditorUserBuildSettings.activeBuildTargetChanged += Update;
+            EditorUserBuildSettings.activeBuildTargetChanged += Update; 
             EditorApplication.update += Update;
         }
 
