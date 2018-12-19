@@ -6,8 +6,8 @@ public class Datos : MonoBehaviour{
 
     public static float hbs = 10.5f;
     public static float hb = 1.5f;
-    public static float hm = 1.5f;
-    public static float dHm = 4.5f;
+    public static float hm = 1.3f;
+    public static float dHm = 4.7f;
 
     public static float d2d, d3d, d3dInd, d3d1, d3d2, angle1, angle2;
 
