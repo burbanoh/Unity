@@ -63,48 +63,47 @@ public class ModeloMETIS : MonoBehaviour {
         ds_28 = lambda_28 / Mathf.Pow(Datos.dhb,2);
         ds_73 = lambda_73 / Mathf.Pow(Datos.dhb,2);
 
-        if(l > ds_28)
+      
+        if(Datos.hbs > hr)
         {
-            if(Datos.hbs > hr)
-            {
-                ka = 54.0f;
-                kd = 18;
-                Lbsh = -18 * Mathf.Log10(1 + Datos.dhb);
+            ka = 54.0f;
+            kd = 18;
+            Lbsh = -18 * Mathf.Log10(1 + Datos.dhb);
 
-            }else if(Datos.hbs <= hr && R > 500)
-            {
-                ka = 54 - 0.8f * Datos.dhb;
+        }else if(Datos.hbs <= hr && R > 500)
+        {
+            ka = 54 - 0.8f * Datos.dhb;
 
-            }else if(Datos.hbs <= hr && R < 500)
-            {
-                ka = 54 - 1.6f * Datos.dhb * R / 1000;
-            }
-
-            if (Datos.hbs <= hr)
-            {
-                kd = 18 - 15 * (Datos.dhb/hr);
-                Lbsh = 0;
-            }
-
-            if(Datos.hbs < hr)
-            {
-                QM_28 = 2.35f * Mathf.Pow(((Datos.dhb / R) * Mathf.Sqrt(b / lambda_28)), 0.9f);
-                QM_73 = 2.35f * Mathf.Pow(((Datos.dhb / R) * Mathf.Sqrt(b / lambda_73)), 0.9f);
-            }
-            else if(Datos.hbs > hr)
-            {
-                QM_28 = b / R;
-                QM_73 = b / R;
-            }
-            else
-            {
-                float theta = Mathf.Atan(Datos.dhb / b);
-                float ro = Mathf.Sqrt(Mathf.Pow(Datos.dhb, 2) + Mathf.Pow(b, 2));
-                QM_28 = (b / (2 * Mathf.PI * R) * Mathf.Sqrt(lambda_28 / ro) * (1/theta - 1/(2 * Mathf.PI + theta)));
-                QM_73 = (b / (2 * Mathf.PI * R) * Mathf.Sqrt(lambda_73 / ro) * (1 / theta - 1 / (2 * Mathf.PI + theta)));
-            }
-
+        }else if(Datos.hbs <= hr && R < 500)
+        {
+            ka = 54 - 1.6f * Datos.dhb * R / 1000;
         }
+
+        if (Datos.hbs <= hr)
+        {
+            kd = 18 - 15 * (Datos.dhb/hr);
+            Lbsh = 0;
+        }
+
+        if(Datos.hbs < hr)
+        {
+            QM_28 = 2.35f * Mathf.Pow(((Datos.dhb / R) * Mathf.Sqrt(b / lambda_28)), 0.9f);
+            QM_73 = 2.35f * Mathf.Pow(((Datos.dhb / R) * Mathf.Sqrt(b / lambda_73)), 0.9f);
+        }
+        else if(Datos.hbs > hr)
+        {
+            QM_28 = b / R;
+            QM_73 = b / R;
+        }
+        else
+        {
+            float theta = Mathf.Atan(Datos.dhb / b);
+            float ro = Mathf.Sqrt(Mathf.Pow(Datos.dhb, 2) + Mathf.Pow(b, 2));
+            QM_28 = (b / (2 * Mathf.PI * R) * Mathf.Sqrt(lambda_28 / ro) * (1/theta - 1/(2 * Mathf.PI + theta)));
+            QM_73 = (b / (2 * Mathf.PI * R) * Mathf.Sqrt(lambda_73 / ro) * (1 / theta - 1 / (2 * Mathf.PI + theta)));
+        }
+
+        //Condicion principal
 
         if (l > ds_28)
         {
