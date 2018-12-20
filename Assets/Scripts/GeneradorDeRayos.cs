@@ -58,20 +58,21 @@ public class GeneradorDeRayos : MonoBehaviour {
     {
         //Direccion del Rayo directo
         dirTargetDirecto = target.position - transform.position;
-
+        
         //Genera rayo directo hacia el usuario
         if (Physics.Raycast(transform.position, dirTargetDirecto, out hitDirect, Mathf.Infinity))
         {
             //Primer rayo Directo solo se renderiza si no golpea con un obstaculo
             if (!hitDirect.transform.gameObject.CompareTag("Obstaculo"))
             {
-                Datos.d3d = hitDirect.distance;
+                //Datos.d3d = hitDirect.distance;
+                Datos.d3d = dirTargetDirecto.magnitude;
                 Datos.angle1 = 180 * Mathf.Atan(Mathf.Abs(dirTargetDirecto.y) / Mathf.Abs(dirTargetDirecto.x)) / Mathf.PI;
                 Debug.DrawRay(transform.position, dirTargetDirecto, Color.yellow);
             }
             else
             {
-                Datos.d3d = 0f;
+                Datos.d3d = hitDirect.distance;
             }
         }
     }
