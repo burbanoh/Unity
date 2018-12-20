@@ -30,9 +30,10 @@ public class ModeloITU : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
+        Handle_ModeloITU();
         if (Input.GetKeyDown("space"))
         {
-            Handle_ModeloITU();
+            
         }
     }
     #endregion
@@ -69,7 +70,7 @@ public class ModeloITU : MonoBehaviour {
         else
         {
             lineaTxt.text =  ("No tiene linea de vista");
-            if (d3d > 100)
+            if (d3d < 100)
             {
                 PL_28 = 96.9f + 15.1f * Mathf.Log10(Datos.d3d);
             }

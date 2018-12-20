@@ -42,9 +42,11 @@ public class Modelo3GPP : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+
+        Handle_Modelo3GPP();
         if (Input.GetKeyDown("space"))
         {
-            Handle_Modelo3GPP();
+           
         }
     }
 
