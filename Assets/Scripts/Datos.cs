@@ -5,7 +5,7 @@ using UnityEngine;
 public class Datos : MonoBehaviour{
 
     public static float hbs = 10.5f;
-    public static float hb = 1.5f;
+    public static float dhb = 1.5f;
     public static float hm = 1.3f;
     public static float dHm = 4.7f;
 
@@ -21,7 +21,9 @@ public class Datos : MonoBehaviour{
 
     void Update()
     {
-        d2d = d3d * Mathf.Cos(DegreeToRadian(angle1));
+        angle1 = Mathf.Cos(DegreeToRadian(angle1));
+        angle2 = Mathf.Cos(DegreeToRadian(angle2));
+        d2d = d3d * angle1;
     }
 
 

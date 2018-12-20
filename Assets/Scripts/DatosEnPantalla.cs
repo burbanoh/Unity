@@ -73,7 +73,11 @@ public class DatosEnPantalla : MonoBehaviour {
         #endregion
 
         #region METIS
+        LOS_METIS_28.text = Datos.LOS_METIS_28.ToString("N2");
+        NLOS_METIS_28.text = Datos.NLOS_METIS_28.ToString("N2");
 
+        LOS_METIS_73.text = Datos.LOS_METIS_73.ToString("N2");
+        NLOS_METIS_73.text = Datos.NLOS_METIS_73.ToString("N2");
         #endregion
 
 
